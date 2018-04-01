@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Fonts */
+  --main-font: 'Alfa Slab One', cursive;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Colors */
+  --bkg-color: #222;
+  --highlight-color: #ff5252;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5em;
+  background-color: var(--bkg-color);
+  color: white;
+}
+
+h1 {
+  font-family: var(--main-font);
+  color: ghostwhite;
+  font-size: 4em;
+  line-height: 1.2em;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: var(--main-font);
+  color: var(--highlight-color);
+  font-size: 2em;
+  line-height: 1.2em;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  padding: 0 20%;
+  margin-bottom: 50px;
+}
+
+h3 {
+  color: var(--highlight-color);
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: var(--secondary-font);
+  margin-bottom: 15px;
+  padding: 0 20%;
+}
+
+/* Wrappers */
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-template-rows: 90% auto;
+}
+
+nav {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  align-self: end;
+  padding-left: 2em;
+}
+
+main {
+  align-self: center;
+}
+
+footer {
+  align-self: center;
+  text-align: center;
+}
