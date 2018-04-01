@@ -1,41 +1,7 @@
-# Babel Webpack Starter
+# 2018 PORTFOLIO
 
-A starter pack to build JavaScript applications using standards from ES2015, ES2016 & ES2017. It uses webpack, Babel and webpack-dev-server to compile and serve. It is fully compatible with Async/Await as it uses the Babel polyfill.
+My passion for coding and all things tech-related has been re-ignited. This calls for a freshly created portfolio.
 
-### Version
-1.1.0
+## GAME PLAN
 
-## Usage
-
-### Installation
-
-Install the dependencies
-
-```sh
-$ npm install
-```
-
-### Serve
-To serve in the browser  - Runs webpack-dev-server
-
-```sh
-$ npm start
-```
-
-### Build
-Compile and build
-
-```sh
-$ npm run build
-```
-
-## More Info
-
-### Author
-
-Brad Traversy
-[Traversy Media](http://www.traversymedia.com)
-
-### License
-
-This project is licensed under the MIT License
+I am going to keep things simple. KISS as it were.
