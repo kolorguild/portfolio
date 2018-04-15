@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -9,72 +10,105 @@
   --secondary-font: 'Raleway', sans-serif;
 
   /* Colors */
-  --bkg-color: #222;
-  --highlight-color: #ff5252;
+  --primary-grey: #222;
+  --secondary-grey: #666;
+  --tertiary-grey: #999;
+  --splash-red: #ff5252;
 }
+
 
 body {
   font-family: sans-serif;
   line-height: 1.5em;
-  background-color: var(--bkg-color);
-  color: white;
+  background-color: var(--primary-grey);
+  color: var(--tertiary-grey);
+  scroll-behavior: smooth;
 }
 
 h1 {
   font-family: var(--main-font);
   color: ghostwhite;
-  font-size: 4em;
+  font-size: 3em;
   line-height: 1.2em;
   letter-spacing: 0.13em;
+  padding: 5% 10% 0 10%;
   text-transform: uppercase;
 }
 
 h2 {
-  font-family: var(--main-font);
-  color: var(--highlight-color);
-  font-size: 2em;
+  font-family: var(--secondary-font);
+  color: var(--splash-red);
+  font-size: 1.6em;
   line-height: 1.2em;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 0 20%;
+  padding: 0 10%;
   margin-bottom: 50px;
 }
 
 h3 {
-  color: var(--highlight-color);
+  color: var(--splash-red);
   margin-bottom: 60px;
+  padding: 0 10%;
   text-transform: uppercase;
 }
 
 p {
   font-family: var(--secondary-font);
   margin-bottom: 15px;
-  padding: 0 20%;
+  padding: 0 10%;
 }
 
 /* Wrappers */
 .container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+}
+
+.container div {
   height: 100vh;
-  margin: 0 auto;
+}
+
+.navbar {
   display: grid;
-  grid-template-columns: 25% auto;
-  grid-template-rows: 90% auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  background-color: var(--primary-grey);
 }
 
-nav {
-  grid-column-start: 1;
-  grid-row-start: 1;
-  grid-row-end: span 2;
-  align-self: end;
-  padding-left: 2em;
-}
-
-main {
-  align-self: center;
-}
-
-footer {
-  align-self: center;
+.navbar .btn {
   text-align: center;
+}
+
+.navbar a {
+  color: var(--tertiary-grey);
+}
+
+.active i, .navbar a:hover {
+  color: var(--splash-red);
+}
+
+.navbar span {
+  font-size: 0;
+}
+
+.navbar i {
+  line-height: 60px;
+}
+
+.base {
+}
+
+.projects {
+  background-color: var(--secondary-grey);
+}
+
+.ramblings {
+}
+
+.contact {
 }
