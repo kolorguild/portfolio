@@ -10,7 +10,7 @@ const productDropShelf = document.querySelector('#productDropShelf');
 const dbKey = 'stockr';
 const addItems = document.querySelector('.addItems');
 const stockList = document.querySelector('.stockList');
-let items = JSON.parse(localStorage.getItem(dbKey));
+let items = localStorage.getItem(dbKey);
 if (items === null) {
 	items = [];
 	localStorage.setItem(dbKey, items);
