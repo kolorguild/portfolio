@@ -1,62 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- FONT
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Bitter|Roboto:300" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- CSS
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="public/lib/css/normalize.css">
+  <link rel="stylesheet" href="public/lib/css/skeleton.css">   
+  <link rel="stylesheet" href="public/lib/css/style.css"> 
 
-	<title>Mr. David | Micro Portfolio</title>
-</head>
-
-<body>
-
-	<div class="container">
-
-    <div id="base" class="slider">
-      <h1>Mr. David</h1>
-      <h3>// Micro Portfolio</h3>
-      <h2>// Fac Fortia Et Patere</h2>
-      <p>Lorem ipsum dolor sit amet, vel tritani luptatum mediocritatem te. Has eu veri numquam epicurei, cu antiopam cotidieque his. Ea tation virtute qui.</p>
-
-    </div> 
-
-
-<div id="projects" class="slider">
-  <h2>// Journey Of Projects</h2>
-  <div class="showcase">
-    <div class="card">Project One</div>
-    <div class="card">Project Two</div>
-    <div class="card">Project Three</div>
-    <div class="card">Project Four</div>
-    <div class="card">Project Five</div>
-    <div class="card">Project Six</div>
-  </div>
-</div> 
-
-    <div id="ramblings" class="slider">Lorem ipsum dolor sit amet, vel tritani luptatum mediocritatem te. Has eu veri numquam epicurei, cu antiopam cotidieque his. Ea tation virtute qui. In sit ubique tritani dolores, mei at laoreet constituto, eos iusto sonet facilisis ne. Eos ex sint agam.</div> 
-
-
-    <div id="contact" class="slider">Lorem ipsum dolor sit amet, vel tritani luptatum mediocritatem te. Has eu veri numquam epicurei, cu antiopam cotidieque his. Ea tation virtute qui. In sit ubique tritani dolores, mei at laoreet constituto, eos iusto sonet facilisis ne. Eos ex sint agam.</div> 
-
-	</div>
-
-    <div class="navbar">
-      <a href="#base" class="btn active"><i class="fas fa-rocket fa-2x"></i><span>Base</span></a>
-      <a href="#projects" class="btn"><i class="fas fa-trophy fa-2x"></i><span>Projects</span></a>
-      <a href="#ramblings" class="btn"><i class="fas fa-quote-left fa-2x"></i><span>Ramblings</span></a>
-      <a href="#contact" class="btn"><i class="fas fa-envelope fa-2x"></i><span>Contact</span></a>
-    </div>
   
-  <footer>
-    <p>Mr. David &copy; 2018</p>
-  </footer>
+  <title>Stockr App</title>
+  </head>
 
-  <script src="assets/js/app.js"></script>
-</body>
+
+
+  <body>
+
+    <div class="container">
+      <div id="main" class="window">
+      <div class="row">
+        <h1>stockr</h1>
+      </div>
+      <div class="stockItemsList row">
+        <ul class="stockList"></ul>
+        <a href="#stockForm" class="button button-primary">Add Stock</a>
+      </div>
+
+      <div id="stockForm" class="window">
+      <div class="row">
+        <h1>stockr</h1>
+      </div>
+
+
+
+      <form class="addItems"> 
+          <div class="row">
+            <div class="twelve columns">
+             <label for="productName">Product Name</label> 
+             <input type="text" id="productName" placeholder="All Gold Tomato Sauce">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+             <label for="productCode">Product Code</label>
+             <input type="number" id="productCode" placeholder="900123456789">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="six columns">
+              <label for="productPackSize">Pack Size</label>
+              <input type="number" id="productPackSize" placeholder="12">
+            </div>
+            <div class="six columns">
+             <label for="productQuantity">Quantity</label>
+             <input type="number" id="productQuantity" placeholder="24">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <label for="productBBDate">Best Before | Expiry Date</label>
+              <input type="date" id="productBBDate">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="six columns">
+              <label for="productDropNumber">Storeroom Drop</label>
+              <select id="productDropNumber">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <div class="six columns">
+              <label for="productDropShelf">Shelf Number</label>
+              <select id="productDropShelf">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+
+          <input type="submit" value="+ Add Item" class="button-primary">
+					<input type="button" value="Save" id="btnSave" class="button-primary">
+          <a href="#main" class="button button-primary">Back</a>
+        </form>
+      </div> <!-- EOF div#form -->
+    </div>
+
+    <script src="public/lib/js/main.js"></script>
+  </body>
+
 
 </html>
